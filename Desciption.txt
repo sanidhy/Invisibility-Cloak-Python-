@@ -5,21 +5,3 @@ Invisibility cloak through OpenCV Python3
 3. Segment out the red colored cloth by generating a mask. [ used in code ]
 4. Generate the final augmented output to create a magical effect. [ video.mp4 ]
 
-
-You need the following libraries
-import cv2
-import time
-import numpy as np
-
-
-Recording and caching the background for each frame.
-##reading from the webcam
-cap = cv2.VideoCapture(0)
-## Allow the system to sleep for 3 seconds before the webcam starts
-time.sleep(3)
-count = 0
-background = 0
-## Capture the background in range of 60
-for i in range(60):
-    ret, background = cap.read()
-background = np.flip(background, axis=1)
